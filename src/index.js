@@ -1,4 +1,5 @@
-import './scss/style.scss'
+import './scss/style.scss';
+import img from './img/img-security.jpg';
 
 var letters = "abcdefghijklmnopqrstuvwxyz";
 var char = "";
