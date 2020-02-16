@@ -17,3 +17,7 @@ btn.addEventListener('click', (evt) => {
     passwordGen();
     input.value = char;
 });
+
+range.addEventListener('input', () => {
+    charInfo.innerHTML = range.value + " characters";
+});
