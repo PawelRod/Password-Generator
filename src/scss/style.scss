@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css?family=Comfortaa&display=swap');
+
 html, body {
     background: #fff;
     color: #333;
@@ -7,6 +9,9 @@ html, body {
     padding: 0;
 }
 .wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     background: url("../img/img-security-white2.jpg") top center;
     background-size: cover;
     margin-right: auto;
@@ -18,8 +23,10 @@ html, body {
 }
 .app {
     margin: 0 auto;
-    width: 210px;
+    width: 350px;
     padding: 20px;
     background: white;
-    margin-top: 20%;
+    border: 2px solid darkgrey;
+    border-radius: 10px;
+    font-family: 'Comfortaa', cursive;
 }
