@@ -7,7 +7,7 @@ const numbers = "0123456789";
 const symbols = "{}()[]#:;^,.?!'|&_`~@$%/\+-*";
 
 let char = "";
-let arr = [];
+let arr = [lowercase];
 
 lowercaseBox.addEventListener('click', () => {
     const lowercaseIndex = arr.indexOf(lowercase);
