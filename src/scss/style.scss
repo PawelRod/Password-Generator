@@ -5,13 +5,17 @@ $wrapperBg: #21242B;
 $appBg: #2A2C38;
 $mainFontColor: #daaa1a;
 
+@mixin resetBody() {
+    margin: 0;
+    padding: 0;
+}
+
 html, body {
     background: $bodyBg;
     color: #333;
     width: 100%;
     height: 100%;
-    margin: 0;
-    padding: 0;
+    @include resetBody();
 }
 .wrapper {
     display: flex;
