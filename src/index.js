@@ -1,5 +1,4 @@
 import './scss/style.scss';
-import img from './img/img-security.jpg';
 
 const lowercase = "abcdefghijklmnopqrstuvwxyz";
 const uppercase = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
