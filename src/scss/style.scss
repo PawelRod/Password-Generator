@@ -3,7 +3,8 @@
 $bodyBg: #100d0d;
 $wrapperBg: #21242B;
 $appBg: #2A2C38;
-$mainFontColor: #daaa1a;
+$defaultFontColor: #daaa1a;
+$defaultBorder: 4px solid darkgrey;
 
 @mixin resetBody() {
     margin: 0;
@@ -12,7 +13,6 @@ $mainFontColor: #daaa1a;
 
 html, body {
     background: $bodyBg;
-    color: #333;
     width: 100%;
     height: 100%;
     @include resetBody();
@@ -28,14 +28,16 @@ html, body {
     height: 100%;
     padding-right: 10px;
     padding-left:  10px;
+    border-right: $defaultBorder;
+    border-left: $defaultBorder;
 }
 .app {
     margin: 0 auto;
     width: 350px;
     padding: 20px;
     background: $appBg;
-    color: $mainFontColor;
-    border: 2px solid darkgrey;
+    color: $defaultFontColor;
+    border: $defaultBorder;
     border-radius: 10px;
     font-family: 'Comfortaa', cursive;
 }
