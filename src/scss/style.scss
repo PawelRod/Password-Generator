@@ -16,6 +16,12 @@ $defaultBorder: 4px solid darkgrey;
     transition: background ease-out .1s;
 }
 
+%removeOutline {
+    &:focus {
+        outline:0;
+    }
+}
+
 html, body {
     background: $bodyBg;
     width: 100%;
@@ -55,6 +61,7 @@ html, body {
         &:hover {
             @extend %hoverTransitions;
         }
+        @extend %removeOutline;
     }
     button {
         color: $defaultFontColor;
@@ -71,5 +78,6 @@ html, body {
         &:hover {
             @extend %hoverTransitions;
         }
+        @extend %removeOutline;
     }
 }
