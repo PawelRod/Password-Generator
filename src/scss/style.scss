@@ -22,6 +22,8 @@ $defaultBorder: 4px solid darkgrey;
     }
 }
 
+
+
 html, body {
     background: $bodyBg;
     width: 100%;
@@ -70,14 +72,17 @@ html, body {
         border: 0;
         border: 1.5px solid lightgrey;
         border-radius: 8px;
-        margin-left: 20px;
-        padding: 4px;
-        width: 130px;
+        margin: 5px 5px 5px 20px;
+        padding: 7px;
+        width: 140px;
         cursor: pointer;
         text-decoration: none;
         &:hover {
             @extend %hoverTransitions;
         }
         @extend %removeOutline;
+        &:active {
+            margin: 6px 4px 4px 21px;
+        }
     }
 }
