@@ -9,25 +9,33 @@
 <body>
     <div class="wrapper">
         <div class="app">
-            <input id="input" type="text">
-            <button id="btn">Get Password</button>
+            <input class="password" id="input" type="text">
             <p id="charInfo">10 characters</p>
-            <input id="range" type="range" min="3" max="16" value="10">
-            <div>
-                <label for="lowercase">Lowercase</label>
-                <input type="checkbox" id="lowercaseBox" checked>
-            </div>
-            <div>
-                <label for="uppercase">Uppercase</label>
-                <input type="checkbox" id="uppercaseBox">
-            </div>
-            <div>
-                <label for="numbersBox">Numbers</label>
-                <input type="checkbox" id="numbersBox">
-            </div>
-            <div>
-                <label for="symbolsBox">Symbols</label>
-                <input type="checkbox" id="symbolsBox">
+            <div class="config">
+                <div class="options">
+                    <input class="range" id="range" type="range" min="3" max="16" value="10">
+                    <div>
+                        <label for="lowercase">Lowercase</label>
+                        <input type="checkbox" id="lowercaseBox" checked>
+                    </div>
+                    <div>
+                        <label for="uppercase">Uppercase</label>
+                        <input type="checkbox" id="uppercaseBox">
+                    </div>
+                    <div>
+                        <label for="numbersBox">Numbers</label>
+                        <input type="checkbox" id="numbersBox">
+                    </div>
+                    <div>
+                        <label for="symbolsBox">Symbols</label>
+                        <input type="checkbox" id="symbolsBox">
+                    </div>
+                </div>
+                <div class="controls">
+                    <button id="btn">Get Password</button>
+                    <button>Copy</button>
+                    <button>Reset</button>
+                </div>
             </div>
         </div>
     </div>

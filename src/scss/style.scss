@@ -22,8 +22,6 @@ $defaultBorder: 4px solid darkgrey;
     }
 }
 
-
-
 html, body {
     background: $bodyBg;
     width: 100%;
@@ -53,11 +51,13 @@ html, body {
     border: $defaultBorder;
     border-radius: 10px;
     font-family: 'Comfortaa', cursive;
-    input {
+    .password {
         color: $defaultFontColor;
         font-size: 20px;
         font-weight: bold;
+        text-align: center;
         background: #3f4759;
+        width: 100%;
         border: 0;
         border-bottom: 3px solid lightgrey;
         &:hover {
@@ -65,24 +65,47 @@ html, body {
         }
         @extend %removeOutline;
     }
-    button {
-        color: $defaultFontColor;
-        font-size: 16px;
-        background: #3f4759;
-        border: 0;
-        border: 1.5px solid lightgrey;
-        border-radius: 8px;
-        margin: 5px 5px 5px 20px;
-        padding: 7px;
-        width: 140px;
-        cursor: pointer;
-        text-decoration: none;
-        &:hover {
-            @extend %hoverTransitions;
+    p {
+        text-align: center;
+    }
+}
+.config {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    .options {
+        width: 225px;
+        .range {
+            padding: 10px 0;
+            width: 100%;
         }
-        @extend %removeOutline;
-        &:active {
-            margin: 6px 4px 4px 21px;
+        label {
+            display:inline-block;
+            width: 100px;
+        }
+    }
+    .controls {
+        width: 225px;
+        button {
+            color: $defaultFontColor;
+            font-size: 16px;
+            background: #3f4759;
+            border: 0;
+            border: 1.5px solid lightgrey;
+            border-radius: 8px;
+            margin: 5px 5px 5px 20px;
+            padding: 7px;
+            width: 140px;
+            height: 36px;
+            cursor: pointer;
+            text-decoration: none;
+            &:hover {
+                @extend %hoverTransitions;
+            }
+            @extend %removeOutline;
+            &:active {
+                margin: 6px 4px 4px 21px;
+            }
         }
     }
 }
