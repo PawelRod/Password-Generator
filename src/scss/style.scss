@@ -11,6 +11,11 @@ $defaultBorder: 4px solid darkgrey;
     padding: 0;
 }
 
+%hoverTransitions {
+    background: #5e6574;
+    transition: background ease-out .1s;
+}
+
 html, body {
     background: $bodyBg;
     width: 100%;
@@ -33,11 +38,38 @@ html, body {
 }
 .app {
     margin: 0 auto;
-    width: 350px;
-    padding: 20px;
+    width: 450px;
+    padding: 40px;
     background: $appBg;
     color: $defaultFontColor;
     border: $defaultBorder;
     border-radius: 10px;
     font-family: 'Comfortaa', cursive;
+    input {
+        color: $defaultFontColor;
+        font-size: 20px;
+        font-weight: bold;
+        background: #3f4759;
+        border: 0;
+        border-bottom: 3px solid lightgrey;
+        &:hover {
+            @extend %hoverTransitions;
+        }
+    }
+    button {
+        color: $defaultFontColor;
+        font-size: 16px;
+        background: #3f4759;
+        border: 0;
+        border: 1.5px solid lightgrey;
+        border-radius: 8px;
+        margin-left: 20px;
+        padding: 4px;
+        width: 130px;
+        cursor: pointer;
+        text-decoration: none;
+        &:hover {
+            @extend %hoverTransitions;
+        }
+    }
 }
