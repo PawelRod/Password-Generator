@@ -10,10 +10,12 @@
     <div class="wrapper">
         <div class="app">
             <input class="password" id="input" type="text">
-            <p id="charInfo">10 characters</p>
             <div class="config">
                 <div class="options">
-                    <input class="range" id="range" type="range" min="3" max="16" value="10">
+                    <div>
+                        <label class="range-label" id="charInfo">10 characters</label>
+                        <input class="range" id="range" type="range" min="3" max="16" value="10">
+                    </div>
                     <div>
                         <label for="lowercase">Lowercase</label>
                         <input type="checkbox" id="lowercaseBox" checked>

@@ -75,6 +75,12 @@ html, body {
     flex-wrap: wrap;
     .options {
         width: 225px;
+        .range-label {
+            display: block;
+            width: 100%;
+            text-align: center;
+            margin: 5px 0;
+        }
         .range {
             padding: 10px 0;
             width: 100%;
