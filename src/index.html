@@ -13,30 +13,32 @@
             <div class="config">
                 <div class="options">
                     <div>
-                        <label class="range-label" id="charInfo">10 characters</label>
+                        <label class="range_label" id="charInfo">10 characters</label>
                         <input class="range" id="range" type="range" min="3" max="16" value="10">
                     </div>
-                    <div>
+                    <div class="options_checkbox">
                         <label for="lowercase">Lowercase</label>
                         <input type="checkbox" id="lowercaseBox" checked>
                     </div>
-                    <div>
+                    <div class="options_checkbox">
                         <label for="uppercase">Uppercase</label>
                         <input type="checkbox" id="uppercaseBox">
                     </div>
-                    <div>
+                    <div class="options_checkbox">
                         <label for="numbersBox">Numbers</label>
                         <input type="checkbox" id="numbersBox">
                     </div>
-                    <div>
+                    <div class="options_checkbox">
                         <label for="symbolsBox">Symbols</label>
                         <input type="checkbox" id="symbolsBox">
                     </div>
                 </div>
                 <div class="controls">
-                    <button id="btn">Get Password</button>
-                    <button>Copy</button>
-                    <button>Reset</button>
+                    <div class="controls_row">
+                        <button class="controls_btn" id="btn">Get Password</button>
+                        <button class="controls_btn">Copy</button>
+                        <button class="controls_btn controls_btn--red" onclick="location.reload()">Reset</button>
+                    </div>
                 </div>
             </div>
         </div>

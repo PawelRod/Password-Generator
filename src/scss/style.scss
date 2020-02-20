@@ -3,19 +3,27 @@
 $bodyBg: #100d0d;
 $wrapperBg: #21242B;
 $appBg: #2A2C38;
+$defaultFont: 'Comfortaa', cursive;
 $defaultFontColor: #daaa1a;
 $defaultBorder: 4px solid darkgrey;
+$configElementBg: #3f4759;
 
 @mixin resetBody() {
     margin: 0;
     padding: 0;
 }
-
-%hoverTransitions {
-    background: #5e6574;
-    transition: background ease-out .1s;
+@mixin centerContent() {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
+%hoverTransitions {
+    &:hover {
+        background: #5e6574;
+        transition: background ease-out .1s;
+    }
+}
 %removeOutline {
     &:focus {
         outline:0;
@@ -29,9 +37,6 @@ html, body {
     @include resetBody();
 }
 .wrapper {
-    display: flex;
-    justify-content: center;
-    align-items: center;
     background: $wrapperBg;
     margin-right: auto;
     margin-left:  auto;
@@ -41,28 +46,29 @@ html, body {
     padding-left:  10px;
     border-right: $defaultBorder;
     border-left: $defaultBorder;
+    @include centerContent();
 }
 .app {
     margin: 0 auto;
     width: 450px;
-    padding: 40px;
+    padding: 30px 40px;
     background: $appBg;
     color: $defaultFontColor;
     border: $defaultBorder;
     border-radius: 10px;
-    font-family: 'Comfortaa', cursive;
+    font-family: $defaultFont;
     .password {
         color: $defaultFontColor;
         font-size: 20px;
         font-weight: bold;
         text-align: center;
-        background: #3f4759;
+        background: $configElementBg;
         width: 100%;
         border: 0;
         border-bottom: 3px solid lightgrey;
-        &:hover {
-            @extend %hoverTransitions;
-        }
+        margin-bottom: 20px;
+        padding: 5px 0;
+        @extend %hoverTransitions;
         @extend %removeOutline;
     }
     p {
@@ -70,20 +76,21 @@ html, body {
     }
 }
 .config {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
+    @include centerContent();
     .options {
         width: 225px;
-        .range-label {
+        .range_label {
             display: block;
             width: 100%;
             text-align: center;
             margin: 5px 0;
         }
         .range {
-            padding: 10px 0;
+            padding: 5px 0;
             width: 100%;
+        }
+        .options_checkbox {
+            margin: 5px 0 0 55px;
         }
         label {
             display:inline-block;
@@ -92,25 +99,32 @@ html, body {
     }
     .controls {
         width: 225px;
-        button {
-            color: $defaultFontColor;
-            font-size: 16px;
-            background: #3f4759;
-            border: 0;
-            border: 1.5px solid lightgrey;
-            border-radius: 8px;
-            margin: 5px 5px 5px 20px;
-            padding: 7px;
-            width: 140px;
-            height: 36px;
-            cursor: pointer;
-            text-decoration: none;
-            &:hover {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        .controls_row {
+            width: 165px;
+            .controls_btn {
+                color: $defaultFontColor;
+                font-size: 16px;
+                background: $configElementBg;
+                border: 0;
+                border: 1.5px solid lightgrey;
+                border-radius: 8px;
+                margin: 12px 5px 5px 20px;
+                padding: 7px;
+                width: 140px;
+                height: 36px;
+                cursor: pointer;
+                text-decoration: none;
                 @extend %hoverTransitions;
+                @extend %removeOutline;
+                &:active {
+                    margin: 13px 4px 4px 21px;
+                }
             }
-            @extend %removeOutline;
-            &:active {
-                margin: 6px 4px 4px 21px;
+            .controls_btn--red {
+                color: red;
             }
         }
     }
