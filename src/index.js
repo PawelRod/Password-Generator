@@ -41,9 +41,21 @@ btn.addEventListener('click', (evt) => {
     evt.preventDefault();
     char = "";
     passwordGen();
-    input.value = char;
+    password.value = char;
 });
 
 range.addEventListener('input', () => {
-    charInfo.innerHTML = range.value + " characters";
+    charInfo.innerHTML = range.value + ' characters';
+});
+
+const checkboxes = document.querySelectorAll('input[type=checkbox]');
+const checkboxesArr = Array.from(checkboxes);
+
+resetBtn.addEventListener('click', () => {
+    password.value = '';
+    range.value = 10;
+    charInfo.innerHTML = range.value + ' characters';
+    checkboxesArr.forEach(val => val.checked = false);
+    checkboxesArr[0].checked = true;
+    arr = [lowercase];
 });
