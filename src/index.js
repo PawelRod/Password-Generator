@@ -59,3 +59,9 @@ resetBtn.addEventListener('click', () => {
     checkboxesArr[0].checked = true;
     arr = [lowercase];
 });
+
+copyBtn.addEventListener('click', () => {
+    password.select();
+    password.setSelectionRange(0, 32)
+    document.execCommand("copy");
+});
