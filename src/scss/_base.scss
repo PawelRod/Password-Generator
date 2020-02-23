@@ -1,0 +1,32 @@
+@import url('https://fonts.googleapis.com/css?family=Comfortaa&display=swap');
+
+$bodyBg: #100d0d;
+$wrapperBg: #21242B;
+$appBg: #2A2C38;
+$defaultFont: 'Comfortaa', cursive;
+$defaultFontColor: #daaa1a;
+$defaultBorder: 4px solid darkgrey;
+$configElementBg: #3f4759;
+$configFontSize: 20px;
+
+@mixin resetBody() {
+    margin: 0;
+    padding: 0;
+}
+@mixin centerContent() {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+%hoverTransitions {
+    &:hover {
+        background: #5e6574;
+        transition: background ease-out .1s;
+    }
+}
+%removeOutline {
+    &:focus {
+        outline:0;
+    }
+}

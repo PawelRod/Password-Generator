@@ -1,4 +1,4 @@
-import './scss/style.scss';
+import './scss/main.scss';
 
 const lowercase = "abcdefghijklmnopqrstuvwxyz";
 const uppercase = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";

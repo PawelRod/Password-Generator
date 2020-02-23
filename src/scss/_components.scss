@@ -1,0 +1,147 @@
+.password {
+    color: $defaultFontColor;
+    font-size: 25px;
+    font-weight: bold;
+    text-align: center;
+    background: $configElementBg;
+    width: 100%;
+    border: 0;
+    border-bottom: 3px solid lightgrey;
+    margin-bottom: 20px;
+    padding: 5px 0;
+    @extend %hoverTransitions;
+    @extend %removeOutline;
+}
+.range_label {
+    display: block;
+    width: 100%;
+    text-align: center;
+    margin: 5px 0;
+}
+.range {
+    margin: 15px 0;
+    width: 100%;
+}
+.options_checkbox {
+    margin: 8px 0 0 80px;
+}
+label {
+    display:inline-block;
+    width: 140px;
+}
+.controls_btn {
+    color: $defaultFontColor;
+    font-size: $configFontSize;
+    background: $configElementBg;
+    border: 0;
+    border: 1.5px solid lightgrey;
+    border-radius: 8px;
+    padding: 7px;
+    width: 170px;
+    height: 45px;
+    cursor: pointer;
+    text-decoration: none;
+    @extend %hoverTransitions;
+    @extend %removeOutline;
+}
+.controls_btn--red {
+    color: red;
+}
+.controls_btn:nth-of-type(even) {
+    margin: 28px 1px 28px 1px;
+    &:active {
+        margin: 29px 0px 27px 2px;
+        transition: all 5s;
+    }
+}
+.controls_btn:nth-of-type(odd) {
+    margin: 1px 1px 1px 1px;
+    &:active {
+        margin: 2px 0px 0px 2px;
+    }
+}
+input[type=range] {
+    -webkit-appearance: none;
+    width: 100%;
+    margin: 20px 0;
+}
+input[type=range]:focus {
+    outline: none;
+}
+input[type=range]::-webkit-slider-runnable-track {
+    width: 100%;
+    height: 5.9px;
+    cursor: pointer;
+    box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
+    background: #3f4759;
+    border-radius: 1.3px;
+    border: 0.2px solid #010101;
+}
+input[type=range]::-webkit-slider-thumb {
+    box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
+    border: 1px solid #000000;
+    height: 24px;
+    width: 11px;
+    border-radius: 3px;
+    background: #daaa1a;
+    cursor: pointer;
+    -webkit-appearance: none;
+    margin-top: -9.25px;
+}
+input[type=range]:focus::-webkit-slider-runnable-track {
+    background: #b1b8c8;
+}
+input[type=range]::-moz-range-track {
+    width: 100%;
+    height: 5.9px;
+    cursor: pointer;
+    box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
+    background: #3f4759;
+    border-radius: 1.3px;
+    border: 0.2px solid #010101;
+}
+input[type=range]::-moz-range-thumb {
+    box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
+    border: 1px solid #000000;
+    height: 24px;
+    width: 11px;
+    border-radius: 3px;
+    background: #daaa1a;
+    cursor: pointer;
+}
+input[type=range]::-ms-track {
+    width: 100%;
+    height: 5.9px;
+    cursor: pointer;
+    background: transparent;
+    border-color: transparent;
+    color: transparent;
+}
+input[type=range]::-ms-fill-lower {
+    background: #000000;
+    border: 0.2px solid #010101;
+    border-radius: 2.6px;
+    box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
+}
+input[type=range]::-ms-fill-upper {
+    background: #3f4759;
+    border: 0.2px solid #010101;
+    border-radius: 2.6px;
+    box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
+}
+input[type=range]::-ms-thumb {
+    box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
+    border: 1px solid #000000;
+    height: 24px;
+    width: 11px;
+    border-radius: 3px;
+    background: #daaa1a;
+    cursor: pointer;
+    height: 5.9px;
+}
+input[type=range]:focus::-ms-fill-lower {
+    background: #3f4759;
+}
+input[type=range]:focus::-ms-fill-upper {
+    background: #b1b8c8;
+}
