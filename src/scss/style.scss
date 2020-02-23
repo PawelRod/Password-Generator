@@ -44,15 +44,14 @@ html, body {
     height: 100%;
     padding-right: 10px;
     padding-left:  10px;
-    // border-right: $defaultBorder;
-    // border-left: $defaultBorder;
     box-shadow: 0px 0px 130px 160px rgba(33,36,43,1);
     @include centerContent();
 }
 .app {
     margin: 0 auto;
-    width: 450px;
-    padding: 30px 40px;
+    width: 630px;
+    height: 280px;
+    padding: 40px 60px;
     background: $appBg;
     color: $defaultFontColor;
     border: $defaultBorder;
@@ -60,7 +59,7 @@ html, body {
     font-family: $defaultFont;
     .password {
         color: $defaultFontColor;
-        font-size: 20px;
+        font-size: 25px;
         font-weight: bold;
         text-align: center;
         background: $configElementBg;
@@ -79,8 +78,10 @@ html, body {
 .config {
     @include centerContent();
     flex-wrap: wrap;
+    margin: 20px 0;
     .options {
-        width: 225px;
+        width: 315px;
+        font-size: 20px;
         .range_label {
             display: block;
             width: 100%;
@@ -92,20 +93,21 @@ html, body {
             width: 100%;
         }
         .options_checkbox {
-            margin: 5px 0 0 55px;
+            margin: 8px 0 0 80px;
         }
         label {
             display:inline-block;
-            width: 100px;
+            width: 140px;
         }
     }
     .controls {
-        width: 225px;
+        width: 315px;
         display: flex;
         align-items: center;
         justify-content: center;
+        height: 200px;
         .controls_row {
-            width: 165px;
+            width: 170px;
             .controls_btn {
                 color: $defaultFontColor;
                 font-size: 16px;
@@ -113,21 +115,30 @@ html, body {
                 border: 0;
                 border: 1.5px solid lightgrey;
                 border-radius: 8px;
-                margin: 12px 5px 5px 20px;
                 padding: 7px;
-                width: 140px;
-                height: 36px;
+                width: 170px;
+                height: 45px;
                 cursor: pointer;
                 text-decoration: none;
                 @extend %hoverTransitions;
                 @extend %removeOutline;
-                &:active {
-                    margin: 13px 4px 4px 21px;
-                }
             }
             .controls_btn--red {
                 color: red;
             }
         }
+    }
+}
+.controls_btn:nth-of-type(even) {
+    margin: 28px 1px 28px 1px;
+    &:active {
+        margin: 29px 0px 27px 2px;
+        transition: all 5s;
+    }
+}
+.controls_btn:nth-of-type(odd) {
+    margin: 1px 1px 1px 1px;
+    &:active {
+        margin: 2px 0px 0px 2px;
     }
 }
