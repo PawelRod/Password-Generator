@@ -64,4 +64,5 @@ copyBtn.addEventListener('click', () => {
     password.select();
     password.setSelectionRange(0, 32)
     document.execCommand("copy");
+    password.blur();
 });

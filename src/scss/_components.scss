@@ -1,4 +1,4 @@
-.password {
+.app_password {
     color: $defaultFontColor;
     font-size: 25px;
     font-weight: bold;
@@ -18,47 +18,9 @@
     text-align: center;
     margin: 5px 0;
 }
-.range {
+.range_input {
     margin: 15px 0;
     width: 100%;
-}
-.options_checkbox {
-    margin: 8px 0 0 80px;
-}
-label {
-    display:inline-block;
-    width: 140px;
-}
-.controls_btn {
-    color: $defaultFontColor;
-    font-size: $configFontSize;
-    background: $configElementBg;
-    border: 0;
-    border: 1.5px solid lightgrey;
-    border-radius: 8px;
-    padding: 7px;
-    width: 170px;
-    height: 45px;
-    cursor: pointer;
-    text-decoration: none;
-    @extend %hoverTransitions;
-    @extend %removeOutline;
-}
-.controls_btn--red {
-    color: red;
-}
-.controls_btn:nth-of-type(even) {
-    margin: 28px 1px 28px 1px;
-    &:active {
-        margin: 29px 0px 27px 2px;
-        transition: all 5s;
-    }
-}
-.controls_btn:nth-of-type(odd) {
-    margin: 1px 1px 1px 1px;
-    &:active {
-        margin: 2px 0px 0px 2px;
-    }
 }
 input[type=range] {
     -webkit-appearance: none;
@@ -73,7 +35,7 @@ input[type=range]::-webkit-slider-runnable-track {
     height: 5.9px;
     cursor: pointer;
     box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
-    background: #3f4759;
+    background: $configElementBg;
     border-radius: 1.3px;
     border: 0.2px solid #010101;
 }
@@ -88,15 +50,15 @@ input[type=range]::-webkit-slider-thumb {
     -webkit-appearance: none;
     margin-top: -9.25px;
 }
-input[type=range]:focus::-webkit-slider-runnable-track {
-    background: #b1b8c8;
+input[type=range]::-webkit-slider-runnable-track {
+    @extend %hoverTransitions;
 }
 input[type=range]::-moz-range-track {
     width: 100%;
     height: 5.9px;
     cursor: pointer;
     box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
-    background: #3f4759;
+    background: $configElementBg;
     border-radius: 1.3px;
     border: 0.2px solid #010101;
 }
@@ -106,7 +68,7 @@ input[type=range]::-moz-range-thumb {
     height: 24px;
     width: 11px;
     border-radius: 3px;
-    background: #daaa1a;
+    background: $defaultFontColor;
     cursor: pointer;
 }
 input[type=range]::-ms-track {
@@ -124,7 +86,7 @@ input[type=range]::-ms-fill-lower {
     box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
 }
 input[type=range]::-ms-fill-upper {
-    background: #3f4759;
+    background: $configElementBg;
     border: 0.2px solid #010101;
     border-radius: 2.6px;
     box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
@@ -135,13 +97,100 @@ input[type=range]::-ms-thumb {
     height: 24px;
     width: 11px;
     border-radius: 3px;
-    background: #daaa1a;
+    background: $defaultFontColor;
     cursor: pointer;
     height: 5.9px;
 }
 input[type=range]:focus::-ms-fill-lower {
-    background: #3f4759;
+    background: $configElementBg;
 }
 input[type=range]:focus::-ms-fill-upper {
     background: #b1b8c8;
+}
+.checkbox_item {
+    display: block;
+    position: relative;
+    width: 140px;
+    padding-left: 65px;
+    margin-bottom: 5px;
+    padding-top: 3px;
+    cursor: pointer;
+    font-size: $configFontSize;
+}
+.checkbox_item input {
+    position: absolute;
+    z-index: -1;
+    opacity: 0;
+}
+.checkbox_indicator {
+    position: absolute;
+    top: 2px;
+    right: -40px;
+    height: 15px;
+    width: 15px;
+    background: $configElementBg;
+    border: 1px solid lightgrey;
+    border-radius: 0px;
+}
+.checkbox_item:hover {
+    input ~ .checkbox_indicator,
+    .checkbox_item input:active ~ .checkbox_indicator {
+        @extend %hoverTransitions;
+    }
+}
+.checkbox_item:hover {
+    input:not([disabled]):checked ~ .checkbox_indicator,
+    .checkbox_item input:checked:focus ~ .checkbox_indicator {
+        background: $configElementBg;
+    }
+}
+.checkbox_indicator:after {
+    box-sizing: unset;
+    content: '';
+    position: absolute;
+    display: none;
+}
+.checkbox_item {
+    input:checked ~ .checkbox_indicator:after {
+        display: block;
+    }
+}
+.checkbox_indicator:after {
+    left: 5px;
+    top: 2px;
+    width: 5px;
+    height: 8px;
+    border: solid $defaultFontColor;
+    border-width: 0 2px 2px 0;
+    transform: rotate(45deg);
+}
+.controls_btn {
+    color: $defaultFontColor;
+    font-size: $configFontSize;
+    background: $configElementBg;
+    border: 0;
+    border: 1.5px solid lightgrey;
+    border-radius: 8px;
+    padding: 7px;
+    width: 170px;
+    height: 45px;
+    cursor: pointer;
+    text-decoration: none;
+    @extend %hoverTransitions;
+    @extend %removeOutline;
+}
+.controls_btn--red {
+    color: #ec4949;
+}
+.controls_btn:nth-of-type(even) {
+    margin: 28px 1px 28px 1px;
+    &:active {
+        margin: 29px 0px 27px 2px;
+    }
+}
+.controls_btn:nth-of-type(odd) {
+    margin: 1px 1px 1px 1px;
+    &:active {
+        margin: 2px 0px 0px 2px;
+    }
 }
