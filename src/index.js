@@ -60,7 +60,15 @@ resetBtn.addEventListener('click', () => {
     arr = [lowercase];
 });
 
+function copiedAlert() {
+    appAlert.classList.add('app_alert--green');
+    setTimeout(function(){
+        appAlert.classList.remove('app_alert--green');
+    }, 3000);
+}
+
 copyBtn.addEventListener('click', () => {
+    copiedAlert();
     password.select();
     password.setSelectionRange(0, 32)
     document.execCommand("copy");

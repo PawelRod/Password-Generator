@@ -20,14 +20,23 @@ html, body {
 .app {
     margin: 0 auto;
     width: 630px;
-    height: 280px;
+    height: 310px;
     padding: 40px 60px;
     background: $appBg;
     color: $defaultFontColor;
     border: $defaultBorder;
     border-radius: 10px;
-    p {
+    .app_alert {
+        height: 23px;
+        margin: 0;
         text-align: center;
+        font-size: $configFontSize;
+    }
+    .app_alert--green {
+        color: #198f19;
+    }
+    .app_alert--green:after {
+        content: 'Copied!';
     }
 }
 .config {
@@ -43,7 +52,7 @@ html, body {
         display: flex;
         align-items: center;
         justify-content: center;
-        height: 200px;
+        height: 210px;
         .controls_row {
             width: 170px;
         }

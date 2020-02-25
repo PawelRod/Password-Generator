@@ -112,7 +112,7 @@ input[type=range]:focus::-ms-fill-upper {
     position: relative;
     width: 140px;
     padding-left: 65px;
-    margin-bottom: 5px;
+    margin-bottom: 7px;
     padding-top: 3px;
     cursor: pointer;
     font-size: $configFontSize;
@@ -166,14 +166,15 @@ input[type=range]:focus::-ms-fill-upper {
 }
 .controls_btn {
     color: $defaultFontColor;
+    font-family: $defaultFont;
     font-size: $configFontSize;
     background: $configElementBg;
     border: 0;
     border: 1.5px solid lightgrey;
     border-radius: 8px;
     padding: 7px;
-    width: 170px;
-    height: 45px;
+    width: 175px;
+    height: 48px;
     cursor: pointer;
     text-decoration: none;
     @extend %hoverTransitions;
@@ -183,9 +184,9 @@ input[type=range]:focus::-ms-fill-upper {
     color: #ec4949;
 }
 .controls_btn:nth-of-type(even) {
-    margin: 28px 1px 28px 1px;
+    margin: 24px 1px 24px 1px;
     &:active {
-        margin: 29px 0px 27px 2px;
+        margin: 25px 0px 23px 2px;
     }
 }
 .controls_btn:nth-of-type(odd) {
