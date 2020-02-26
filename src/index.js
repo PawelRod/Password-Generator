@@ -37,8 +37,23 @@ function passwordGen(number) {
     return char;
 };
 
+const checkboxes = document.querySelectorAll('input[type=checkbox]');
+const checkboxesArr = Array.from(checkboxes);
+const checkboxIndicators = document.querySelectorAll('.checkbox_indicator');
+
+function validator() {
+    if(typeof arr[0] != "string") {
+        appAlert.classList.remove('app_alert--green');
+        appAlert.classList.add('app_alert--red');
+        checkboxIndicators.forEach(val => val.style.border = "1px solid #ec4949");
+    } else {
+        appAlert.classList.remove('app_alert--red');
+    }
+}
+
 btn.addEventListener('click', (evt) => {
     evt.preventDefault();
+    validator();
     char = "";
     passwordGen();
     password.value = char;
@@ -47,9 +62,6 @@ btn.addEventListener('click', (evt) => {
 range.addEventListener('input', () => {
     charInfo.innerHTML = range.value + ' characters';
 });
-
-const checkboxes = document.querySelectorAll('input[type=checkbox]');
-const checkboxesArr = Array.from(checkboxes);
 
 resetBtn.addEventListener('click', () => {
     password.value = '';
@@ -61,13 +73,16 @@ resetBtn.addEventListener('click', () => {
 });
 
 function copiedAlert() {
-    appAlert.classList.add('app_alert--green');
     setTimeout(function(){
-        appAlert.classList.remove('app_alert--green');
-    }, 3000);
+        appAlert.classList.add('app_alert--green');
+    }, 1);
 }
 
 copyBtn.addEventListener('click', () => {
+    appAlert.classList.remove('app_alert--green');
+    if (appAlert.classList.contains('app_alert--red') != false) {
+        appAlert.classList.remove('app_alert--green');
+    }
     copiedAlert();
     password.select();
     password.setSelectionRange(0, 32)
