@@ -41,13 +41,38 @@ const checkboxes = document.querySelectorAll('input[type=checkbox]');
 const checkboxesArr = Array.from(checkboxes);
 const checkboxIndicators = document.querySelectorAll('.checkbox_indicator');
 
+function addRedAlertWithoutTransition() {
+    setTimeout(function(){
+        appAlert.classList.add('app_alert--red');
+    }, 1);
+}
+
+function addGreenAlertWithTransition() {
+    setTimeout(function(){
+        appAlert.classList.add('app_alert--green');
+    }, 1);
+}
+
+function switchAlertToRed() {
+    appAlert.classList.remove('app_alert--green');
+    addRedAlertWithoutTransition();
+    checkboxIndicators.forEach(val => val.style.border = "1px solid #ec4949");
+}
+
+function removeRedAlert() {
+    appAlert.classList.remove('app_alert--red');
+    checkboxIndicators.forEach(val => val.style.border = "1px solid lightgrey");
+}
+
+function removeGreenAlert() {
+    appAlert.classList.remove('app_alert--green');
+}
+
 function validator() {
     if(typeof arr[0] != "string") {
-        appAlert.classList.remove('app_alert--green');
-        appAlert.classList.add('app_alert--red');
-        checkboxIndicators.forEach(val => val.style.border = "1px solid #ec4949");
+        switchAlertToRed();
     } else {
-        appAlert.classList.remove('app_alert--red');
+        removeRedAlert();
     }
 }
 
@@ -64,6 +89,7 @@ range.addEventListener('input', () => {
 });
 
 resetBtn.addEventListener('click', () => {
+    removeRedAlert();
     password.value = '';
     range.value = 10;
     charInfo.innerHTML = range.value + ' characters';
@@ -72,20 +98,15 @@ resetBtn.addEventListener('click', () => {
     arr = [lowercase];
 });
 
-function copiedAlert() {
-    setTimeout(function(){
-        appAlert.classList.add('app_alert--green');
-    }, 1);
-}
-
 copyBtn.addEventListener('click', () => {
-    appAlert.classList.remove('app_alert--green');
+    removeGreenAlert();
     if (appAlert.classList.contains('app_alert--red') != false) {
-        appAlert.classList.remove('app_alert--green');
+        removeGreenAlert();
+    } else {
+        addGreenAlertWithTransition();
     }
-    copiedAlert();
     password.select();
-    password.setSelectionRange(0, 32)
+    password.setSelectionRange(0, 32);
     document.execCommand("copy");
     password.blur();
 });
