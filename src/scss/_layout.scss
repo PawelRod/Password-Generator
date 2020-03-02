@@ -8,6 +8,7 @@ html, body {
 }
 .wrapper {
     background: $wrapperBg;
+    color: $defaultFontColor;
     margin-right: auto;
     margin-left:  auto;
     max-width: 1200px;
@@ -23,7 +24,6 @@ html, body {
     height: 310px;
     padding: 40px 60px;
     background: $appBg;
-    color: $defaultFontColor;
     border: $defaultBorder;
     border-radius: 10px;
     .app_alert {
@@ -71,5 +71,18 @@ html, body {
         .controls_row {
             width: 170px;
         }
+    }
+}
+footer {
+    position: absolute;
+    align-self: flex-end;
+    padding-bottom: 5px;
+    p {
+        text-align: center;
+    }
+    a {
+        text-decoration: none;
+        color: inherit;
+        font-weight: bold;
     }
 }

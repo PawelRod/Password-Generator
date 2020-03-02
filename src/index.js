@@ -37,6 +37,10 @@ function passwordGen(number) {
     return char;
 };
 
+range.addEventListener('input', () => {
+    charInfo.innerHTML = range.value + ' characters';
+});
+
 const checkboxes = document.querySelectorAll('input[type=checkbox]');
 const checkboxesArr = Array.from(checkboxes);
 const checkboxIndicators = document.querySelectorAll('.checkbox_indicator');
@@ -45,18 +49,13 @@ function addRedAlertWithoutTransition() {
     setTimeout(function(){
         appAlert.classList.add('app_alert--red');
     }, 1);
+    checkboxIndicators.forEach(val => val.style.border = "1px solid #ec4949");
 }
 
 function addGreenAlertWithTransition() {
     setTimeout(function(){
         appAlert.classList.add('app_alert--green');
     }, 1);
-}
-
-function switchAlertToRed() {
-    appAlert.classList.remove('app_alert--green');
-    addRedAlertWithoutTransition();
-    checkboxIndicators.forEach(val => val.style.border = "1px solid #ec4949");
 }
 
 function removeRedAlert() {
@@ -70,22 +69,19 @@ function removeGreenAlert() {
 
 function validator() {
     if(typeof arr[0] != "string") {
-        switchAlertToRed();
+        removeGreenAlert();
+        addRedAlertWithoutTransition();
     } else {
         removeRedAlert();
     }
 }
 
-btn.addEventListener('click', (evt) => {
+generateBtn.addEventListener('click', (evt) => {
     evt.preventDefault();
     validator();
     char = "";
     passwordGen();
     password.value = char;
-});
-
-range.addEventListener('input', () => {
-    charInfo.innerHTML = range.value + ' characters';
 });
 
 resetBtn.addEventListener('click', () => {
