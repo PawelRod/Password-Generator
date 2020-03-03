@@ -73,16 +73,24 @@ html, body {
         }
     }
 }
-footer {
+.socials {
     position: absolute;
     align-self: flex-end;
-    padding-bottom: 5px;
+    padding: 15px 0;
     p {
         text-align: center;
+        margin: 10px 0;
     }
-    a {
+    .socials_anchor {
         text-decoration: none;
         color: inherit;
         font-weight: bold;
+    }
+    .socials_logo {
+        background: url(../img/gh-logo.png) center no-repeat;
+        background-size: cover;
+        width: 60px;
+        height: 60px;
+        margin: 0 auto;
     }
 }
