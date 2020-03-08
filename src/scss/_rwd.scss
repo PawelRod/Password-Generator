@@ -1,0 +1,28 @@
+@media #{$tablet} {
+    .app {
+        padding: 40px 30px;
+        height: 336px;
+    }
+    .app_password {
+        max-height: 56px;
+        min-height: 56px;
+    }
+    .config {
+        justify-content: space-around;
+        .options, .controls {
+            width: 185px;
+        }
+        .options {
+            .checkbox_item {
+                padding-left: 15px;
+                .checkbox_indicator {
+                    right: -15px;
+                }
+            }
+        }
+    }
+}
+ 
+@media #{$mobile} {
+
+}

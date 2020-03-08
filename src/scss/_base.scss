@@ -8,6 +8,8 @@ $defaultFontColor: #daaa1a;
 $defaultBorder: 4px solid darkgrey;
 $configElementBg: #3f4759;
 $configFontSize: 20px;
+$tablet: "(min-width: 481px) and (max-width: 768px)";
+$mobile: "(max-width: 480px)";
 
 @mixin resetBody() {
     margin: 0;

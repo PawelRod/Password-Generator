@@ -22,14 +22,14 @@ html, body {
 .header {
     position: absolute;
     align-self: flex-start;
-    width: 480px;
+    width: 445px;
     margin-top: 20px;
     .header_logo {
         display: inline-block;
         background: url(../img/app-logo.png) center no-repeat;
         background-size: cover;
-        width: 120px;
-        height: 120px;
+        width: 115px;
+        height: 115px;
         margin: 0;
     }
     .header_inscription, .header_version {
@@ -37,9 +37,9 @@ html, body {
         font-weight: bold;
     }
     .header_inscription {
-        font-size: 42px;
+        font-size: 38px;
         top: 59px;
-        left: 62px;
+        left: 61px;
     }
     .header_version {
         top: 100px;
@@ -53,10 +53,10 @@ html, body {
     }
 }
 .app {
-    margin: 100px auto 0;
+    margin: 90px auto 0;
     width: 630px;
     height: 310px;
-    padding: 40px 60px;
+    padding: 40px 45px;
     background: $appBg;
     border: $defaultBorder;
     border-radius: 10px;
@@ -93,11 +93,11 @@ html, body {
     flex-wrap: wrap;
     margin: 20px 0;
     .options {
-        width: 315px;
+        width: 302px;
         font-size: $configFontSize;
     }
     .controls {
-        width: 315px;
+        width: 302px;
         display: flex;
         align-items: center;
         justify-content: center;
@@ -113,7 +113,6 @@ html, body {
     padding: 15px 0;
     p {
         text-align: center;
-        margin: 10px 0;
     }
     .socials_anchor {
         text-decoration: none;
@@ -125,6 +124,8 @@ html, body {
         background-size: cover;
         width: 60px;
         height: 60px;
-        margin: 0 auto;
+    }
+    * {
+        margin: 13px auto;
     }
 }
