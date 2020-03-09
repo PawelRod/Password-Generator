@@ -90,7 +90,7 @@ html, body {
 }
 .config {
     @include centerContent();
-    flex-wrap: wrap;
+    flex-wrap: wrap-reverse;
     margin: 20px 0;
     .options {
         width: 302px;

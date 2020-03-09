@@ -24,5 +24,39 @@
 }
  
 @media #{$mobile} {
-
+    .wrapper {
+        min-height: 710px;
+    }
+    .header {
+        width: 310px;
+        .header_logo {
+            width: 70px;
+            height: 70px;
+        }
+        .header_inscription {
+            font-size: 27px;
+            top: 33px;
+            left: 38px;
+        }
+        .header_version {
+            top: 60px;
+            font-size: 12px;
+        }
+        .header_text {
+            margin-top: 8px;
+            text-align: center;
+            font-size: 12px;
+        }
+    }
+    .app {
+        width: 260px;
+        margin-top: 6px;
+        padding: 15px 20px;
+        .app_alert {
+            font-size: 14px;
+        }
+    }
+    .app_password {
+        margin: 0;
+    }
 }
