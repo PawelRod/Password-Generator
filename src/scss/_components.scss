@@ -5,10 +5,11 @@
     font-family: $defaultFont;
     text-align: center;
     background: $configElementBg;
+    box-sizing: border-box;   
     width: 100%;
     max-width: 100%;
-    max-height: 30px;
-    min-height: 30px;
+    max-height: 41px;
+    min-height: 41px;
     border: 0;
     border-bottom: 3px solid lightgrey;
     margin-bottom: 20px;

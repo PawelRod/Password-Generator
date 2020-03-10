@@ -4,8 +4,7 @@
         height: 336px;
     }
     .app_password {
-        max-height: 56px;
-        min-height: 56px;
+        @include highterTextarea();
     }
     .config {
         justify-content: space-around;
@@ -25,10 +24,12 @@
  
 @media #{$mobile} {
     .wrapper {
-        min-height: 710px;
+        min-height:810px;
+        padding: 0;
     }
     .header {
         width: 310px;
+        margin-top: 5px;
         .header_logo {
             width: 70px;
             height: 70px;
@@ -49,14 +50,52 @@
         }
     }
     .app {
-        width: 260px;
+        height: 465px;
+        width: 100%;;
         margin-top: 6px;
-        padding: 15px 20px;
+        padding: 25px 10px;
+        border: none;
+        border-top: $defaultBorderMobile;
+        border-bottom: $defaultBorderMobile;
+        border-radius: 0;
         .app_alert {
-            font-size: 14px;
+            position: relative;
+            top: 7px;
+            font-size: 18px;
         }
     }
     .app_password {
         margin: 0;
+        @include highterTextarea();
+    }
+    .config {
+        margin: 5px 0;
+        .options {
+            margin-top: 15px;
+        }
+        .controls {
+            display: block;
+            height: auto;
+            margin-top: 10px;
+            .controls_row {
+                width: 100%;
+                .controls_btn {
+                    width: 100%;
+                    height: 38px;
+                }
+                .controls_btn:nth-of-type(even) {
+                    margin: 14px 1px 14px 1px;
+                    &:active {
+                        margin: 15px 0px 13px 2px;
+                    }
+                }
+            }
+        }
+    }
+    .socials {
+        padding: 5px 0;
+        * {
+            margin: 8px auto;
+        }
     }
 }

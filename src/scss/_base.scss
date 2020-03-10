@@ -6,6 +6,7 @@ $appBg: #2A2C38;
 $defaultFont: 'Comfortaa', cursive;
 $defaultFontColor: #daaa1a;
 $defaultBorder: 4px solid darkgrey;
+$defaultBorderMobile: 2px solid darkgrey;
 $configElementBg: #3f4759;
 $configFontSize: 20px;
 $tablet: "(min-width: 481px) and (max-width: 768px)";
@@ -19,6 +20,10 @@ $mobile: "(max-width: 480px)";
     display: flex;
     justify-content: center;
     align-items: center;
+}
+@mixin highterTextarea() {
+    max-height: 69px;
+    min-height: 69px;
 }
 
 %hoverTransitions {
