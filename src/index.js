@@ -45,16 +45,15 @@ const checkboxes = document.querySelectorAll('input[type=checkbox]');
 const checkboxesArr = Array.from(checkboxes);
 const checkboxIndicators = document.querySelectorAll('.checkbox_indicator');
 
-function addRedAlertWithoutTransition() {
-    setTimeout(function(){
-        appAlert.classList.add('app_alert--red');
-    }, 1);
+function addRedAlert() {
+    appAlert.classList.add('app_alert--red');
     checkboxIndicators.forEach(val => val.style.border = "1px solid #ec4949");
 }
 
-function addGreenAlertWithTransition() {
+function addGreenAlert() {
     setTimeout(function(){
         appAlert.classList.add('app_alert--green');
+        password.classList.add('app_password--animate');
     }, 1);
 }
 
@@ -65,12 +64,13 @@ function removeRedAlert() {
 
 function removeGreenAlert() {
     appAlert.classList.remove('app_alert--green');
+    password.classList.remove('app_password--animate');
 }
 
 function validator() {
     if(typeof arr[0] != "string") {
         removeGreenAlert();
-        addRedAlertWithoutTransition();
+        addRedAlert();
     } else {
         removeRedAlert();
     }
@@ -99,7 +99,7 @@ copyBtn.addEventListener('click', () => {
     if (appAlert.classList.contains('app_alert--red') != false) {
         removeGreenAlert();
     } else {
-        addGreenAlertWithTransition();
+        addGreenAlert();
     }
     password.select();
     password.setSelectionRange(0, 32);

@@ -37,3 +37,12 @@ $mobile: "(max-width: 480px)";
         outline:0;
     }
 }
+
+@keyframes bgFadeout {
+    0% {
+        background: #686767;
+    }
+    100% {
+        background: auto;
+    }
+}

@@ -17,6 +17,10 @@
     @extend %hoverTransitions;
     @extend %removeOutline;
 }
+.app_password--animate {
+    animation: bgFadeout 1s;
+}
+
 .range_label {
     display: block;
     width: 100%;

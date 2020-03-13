@@ -71,17 +71,18 @@ html, body {
     .app_alert--green, .app_alert--red {
         margin-left: 10px;
         letter-spacing: 0px;
-        transition: opacity 4s .2s, margin-left .5s 0s, letter-spacing .5s 0s;
     }
     .app_alert--green {
         opacity: 0;
         color: #198f19;
+        transition: opacity 4s .2s, margin-left .5s 0s, letter-spacing .5s 0s;
     }
     .app_alert--green:after {
         content: 'Copied to clipboard !';
     }
     .app_alert--red {
         color: #ec4949;
+        transition: margin-left .5s 0s, letter-spacing .5s 0s;
     }
     .app_alert--red:after {
         content: 'Please check any option'
