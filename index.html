@@ -4,44 +4,65 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="icon" href="./img/favicon.ico"/>
     <title>Password Generator by PawelRod</title>
 </head>
 <body>
     <div class="wrapper">
-        <div class="app">
-            <input class="password" id="password" type="text">
+        <header class="header">
+            <div class="header_logo"></div>
+            <span class="header_inscription">assword Generator</span>
+            <span class="header_version">v1.0</span>
+            <p class="header_text">Create a secure password using our generator tool. Help prevent a security threat by getting a strong password.</p>
+        </header>
+        <section class="app">
+            <textarea class="app_password" id="password" type="text" spellcheck="false" autocomplete="off"></textarea>
+            <p class="app_alert" id="appAlert"></p>
             <div class="config">
                 <div class="options">
-                    <div>
+                    <div class="options_range">
                         <label class="range_label" id="charInfo">10 characters</label>
-                        <input class="range" id="range" type="range" min="3" max="32" value="10">
+                        <input class="range_input" id="range" type="range" min="3" max="32" value="10">
                     </div>
                     <div class="options_checkbox">
-                        <label for="lowercase">Lowercase</label>
-                        <input type="checkbox" id="lowercaseBox" checked>
-                    </div>
-                    <div class="options_checkbox">
-                        <label for="uppercase">Uppercase</label>
-                        <input type="checkbox" id="uppercaseBox">
-                    </div>
-                    <div class="options_checkbox">
-                        <label for="numbersBox">Numbers</label>
-                        <input type="checkbox" id="numbersBox">
-                    </div>
-                    <div class="options_checkbox">
-                        <label for="symbolsBox">Symbols</label>
-                        <input type="checkbox" id="symbolsBox">
+                        <label class="checkbox_item">
+                            Lowercase
+                                <input type="checkbox" id="lowercaseBox" checked>
+                            <div class="checkbox_indicator"></div>
+                        </label>
+                        <label class="checkbox_item">
+                            Uppercase
+                                <input type="checkbox" id="uppercaseBox">
+                            <div class="checkbox_indicator"></div>
+                        </label>
+                        <label class="checkbox_item">
+                            Numbers
+                                <input type="checkbox" id="numbersBox">
+                            <div class="checkbox_indicator"></div>
+                        </label>
+                        <label class="checkbox_item">
+                            Symbols
+                                <input type="checkbox" id="symbolsBox">
+                            <div class="checkbox_indicator"></div>
+                        </label>
                     </div>
                 </div>
                 <div class="controls">
                     <div class="controls_row">
-                        <button class="controls_btn" id="btn">Get Password</button>
-                        <button class="controls_btn">Copy</button>
+                        <button class="controls_btn" id="generateBtn">Get Password</button>
+                        <button class="controls_btn" id="copyBtn">Copy</button>
                         <button class="controls_btn controls_btn--red" id="resetBtn">Reset</button>
                     </div>
                 </div>
             </div>
-        </div>
+        </section>
+        <footer class="socials">
+            <p>© Copyright 2020</p>
+            <p>Written and designed by <a class="socials_anchor" href="https://www.linkedin.com/in/pawel-rodziewicz/" target="_blank" title="Linkedin">PawelRod</a></p>
+            <a class="socials_anchor" href="https://github.com/PawelRod/" target="_blank" title="Github">
+                <div class="socials_logo"></div>
+            </a>
+        </footer>
     </div>
 <script type="text/javascript" src="bundle.js"></script></body>
 </html>
