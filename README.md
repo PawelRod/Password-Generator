@@ -31,6 +31,7 @@ npm run dev
 - JavaScript
 - HTML
 - SCSS
+- BEM
 - Photoshop
 - Webpack
 
