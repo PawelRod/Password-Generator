@@ -2,7 +2,7 @@
 
 This project is a small app to generate different passwords, written by using Webpack.
 
-**Live demo:** *Soon*
+**Live demo:** pawelrod.github.io/Password-Generator
 
 ## Installation
 
